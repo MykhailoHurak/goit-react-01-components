@@ -14,7 +14,7 @@ export default function Painting({
     <div>
       <img src={imageUrl} alt={title} width="240" />
       <h2>{title}</h2>
-      <p>Автор: <a href={authorUrl}></a>{authorTag}</p>
+      <p>Автор: <a href={authorUrl}>{authorTag}</a></p>
       <p>Цена: {price} кредитов</p>
       <p>Доступность: {quantity < 10 ? 'заканчивается' : 'есть в наличии'}</p>
       <button type="button">Добавить в корзину</button>
@@ -23,10 +23,10 @@ export default function Painting({
 }
 
 Painting.propTypes = {
-    imageUrl: PropTypes.string,
-    title: PropTypes.string,
-    authorTag: PropTypes.string,
-    authorUrl: PropTypes.string,
-    price: PropTypes.number,
-    quantity: PropTypes.number,
+    imageUrl: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    authorTag: PropTypes.string.isRequired,
+    authorUrl: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    quantity: PropTypes.number.isRequired,
 }
